@@ -3,42 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator - History Stage</title>
+  <title>Calculator - Calculations Stage</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app-shell">
     <section class="calculator">
       <header>
-        <div>
-          <p class="eyebrow">Sankalp Tech Club</p>
-          <h1>Calculator</h1>
-        </div>
-        <button id="historyToggle" class="icon-btn" aria-label="Toggle history">History</button>
+        <div><p class="eyebrow">Sankalp Tech Club</p><h1>Calculator</h1></div>
+        <button id="historyToggle" class="icon-btn">History</button>
       </header>
 
       <div class="display">
-        <div class="expression">History module ready</div>
-        <div class="result">0</div>
+        <div id="expression" class="expression">Ready</div>
+        <div id="result" class="result">0</div>
       </div>
 
-      <div class="placeholder">
-        <p>Calculation buttons will be added in Commit 2.</p>
+      <div class="keys">
+        <button data-action="clear" class="utility">AC</button>
+        <button data-action="delete" class="utility">DEL</button>
+        <button data-value="%" class="operator">%</button>
+        <button data-value="/" class="operator">÷</button>
+
+        <button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button data-value="*" class="operator">×</button>
+        <button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button data-value="-" class="operator">−</button>
+        <button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button data-value="+" class="operator">+</button>
+        <button data-value="0" class="zero">0</button><button data-value=".">.</button><button data-action="equals" class="equals">=</button>
       </div>
     </section>
 
     <aside class="history-panel" id="historyPanel">
-      <div class="history-head">
-        <div>
-          <p class="eyebrow">Commit 1</p>
-          <h2>History</h2>
-        </div>
-        <button id="clearHistory">Clear</button>
-      </div>
+      <div class="history-head"><div><p class="eyebrow">Commit 2</p><h2>History</h2></div><button id="clearHistory">Clear</button></div>
       <div id="historyList" class="history-list"></div>
     </aside>
   </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
